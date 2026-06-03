@@ -1,3 +1,9 @@
 .DS_Store
 .tmp.*
 *.log
+
+# Encryption — NEVER commit these
+# (comments must be on their own line; .gitignore has no inline comments)
+.env
+node_modules/
+.staticrypt.json
