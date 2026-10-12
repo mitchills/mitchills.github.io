@@ -1,0 +1,95 @@
+/* Stepz Fitness Franchising - design tokens
+   Colours from Brand Guideline V5 pp.19-21. See brand-guide.md.
+   Type: DM Sans, standing in for Brown (commercial). Swap in Squarespace. */
+
+@font-face{
+  font-family:'DM Sans';
+  src:url('../fonts/dmsans-latin.woff2') format('woff2');
+  font-weight:100 1000;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'DM Sans';
+  src:url('../fonts/dmsans-latin-italic.woff2') format('woff2');
+  font-weight:100 1000;font-style:italic;font-display:swap;
+}
+
+:root{
+  --navy:#312A4E;
+  --navy-deep:#241F3A;
+  --accent:#504A82;
+  --pale:#D0E6F2;
+  --grey:#ECEDEF;
+  --grey-dark:#DBDCDE;
+  --orange:#F2954E;
+  --orange-dark:#E07F35;
+  --white:#FFFFFF;
+  --ink:#1C1830;
+  --ink-soft:#5A5570;
+
+  --font:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --r:8px;
+  --shadow:0 2px 8px rgba(49,42,78,.08);
+  --shadow-lg:0 12px 32px rgba(49,42,78,.16);
+  --maxw:1180px;
+}
+
+body{
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.6;
+  font-size:1rem;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{line-height:1.12;font-weight:700;letter-spacing:-.02em;color:var(--navy)}
+h1{font-size:clamp(2.1rem,4.6vw,3.5rem)}
+h2{font-size:clamp(1.7rem,3.2vw,2.6rem)}
+h3{font-size:1.2rem;letter-spacing:-.01em}
+p{max-width:640px}
+
+.label{
+  font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.85rem;max-width:none;
+}
+.on-dark .label{color:var(--pale)}
+.on-dark,.on-dark h1,.on-dark h2,.on-dark h3{color:var(--white)}
+.on-dark p{color:rgba(255,255,255,.82)}
+
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.container--narrow{max-width:860px}
+section{padding:6rem 0}
+.sec-head{text-align:center;margin-bottom:3.5rem}
+.sec-head p,.sec-head h2,.sec-head .label{max-width:none}
+.sec-head p{max-width:660px;margin:1rem auto 0}
+
+.bg-grey{background:var(--grey)}
+.bg-navy{background:var(--navy)}
+.bg-navy-deep{background:var(--navy-deep)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  background:var(--orange);color:#fff;font-weight:700;font-size:.95rem;
+  padding:.95rem 1.9rem;border-radius:999px;
+  transition:background .18s ease,transform .18s ease,box-shadow .18s ease;
+}
+.btn:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn--block{width:100%}
+.btn--ghost{background:transparent;border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn--ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* Movement only, never opacity. On a paid-traffic page the copy must be readable
+   even if the IntersectionObserver never fires - no blank sections, ever. */
+.fade-up{transform:translateY(18px);transition:transform .55s cubic-bezier(.22,.61,.36,1)}
+.fade-up.visible{transform:none}
+@media (prefers-reduced-motion:reduce){.fade-up{transform:none;transition:none}}
+
+@media (max-width:900px){
+  section{padding:4.5rem 0}
+  .sec-head{margin-bottom:2.5rem}
+}
+@media (max-width:600px){
+  section{padding:3.5rem 0}
+  h2{font-size:1.5rem}
+  .btn{width:100%;font-size:.85rem;padding:.8rem 1.4rem}
+}
