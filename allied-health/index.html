@@ -4,42 +4,541 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mastered Marketing for Allied Health</title>
-<meta name="description" content="How Mastered Marketing helps allied health clinics get a consistent flow of new patients with Google and social media.">
+<meta name="description" content="How Mastered Marketing helps allied health clinics get a consistent flow of new patients with Google and social media. Results, pricing and our guarantee.">
 <meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-html,body{margin:0;background:#26201A}
-main{max-width:1280px;margin:0 auto}
-img{display:block;width:100%;height:auto;aspect-ratio:16/9;margin:0}
+:root{
+  --accent:#C2683F;--accent-dark:#A9552F;--tan:#AC7F5E;--shell:#F9F4F1;--ink:#26201A;--body:#6D6051;
+  --line:#E2DCD8;--white:#fff;--green:#3F8F6B;--gold:#C9922E;
+  --r:12px;--shadow:0 2px 8px rgba(38,32,26,.06);--wrap:1180px;
+  --serif:'Playfair Display',Georgia,serif;--sans:'Archivo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--body);background:var(--white)}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,5.2vw,3.9rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 1em}
+em{color:var(--accent);font-style:italic}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.alt{background:var(--shell)}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:14px;display:block}
+.lead{font-size:1.2rem;max-width:62ch}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:16px 30px;border-radius:999px;font-size:1rem;transition:background .2s}
+.btn:hover{background:var(--accent-dark)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;box-shadow:var(--shadow)}
+.num{font-family:var(--sans);font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img.photo{border-radius:var(--r);width:100%;height:100%;max-height:560px;object-fit:cover}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav img{height:34px;width:auto}
+.nav a.btn{padding:10px 22px;font-size:.92rem}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink)}
+.nav ul a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding:72px 0 64px;background:var(--shell)}
+.hero .split{gap:48px}
+.hero p.lead{margin-bottom:28px}
+.hero-img{position:relative}
+.hero-img img{border-radius:var(--r);width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.badge{position:absolute;left:-18px;bottom:28px;background:#fff;border-radius:var(--r);padding:16px 20px;box-shadow:0 8px 24px rgba(38,32,26,.14);max-width:210px}
+.badge b{font-family:var(--serif);font-weight:400;font-size:2rem;color:var(--accent);display:block;line-height:1}
+.badge span{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);font-weight:600}
+.proof{display:flex;align-items:center;gap:14px;margin-top:30px;font-size:.95rem;color:var(--ink);font-weight:500}
+.stars{color:var(--gold);letter-spacing:2px;font-size:1.15rem}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.stat{border-top:2px solid var(--accent);padding-top:16px}
+.stat b{display:block;font-size:2.6rem;line-height:1.1;color:var(--ink)}
+.stat span{font-size:.95rem}
+.press{margin-top:48px;text-align:center}
+.press small{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.press img{margin:0 auto;max-width:640px;width:100%;opacity:.85}
+
+/* before / after */
+.ba{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;margin-top:36px}
+.ba-row{display:grid;grid-template-columns:1fr 1fr}
+.ba-row>div{padding:16px 24px;border-top:1px solid var(--line)}
+.ba-row>div:first-child{border-right:1px solid var(--line)}
+.ba-head>div{border-top:0;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+.ba-head>div:first-child{background:#f1ebe7;color:var(--body)}
+.ba-head>div:last-child{background:var(--accent);color:#fff}
+.ba-row:not(.ba-head)>div:last-child{color:var(--ink);font-weight:500}
+.ba-row:not(.ba-head)>div:last-child::before{content:"\2192  ";color:var(--accent);font-weight:600}
+
+/* case studies */
+.elite{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.elite img{width:100%;height:100%;object-fit:cover;min-height:340px}
+.elite .body{padding:40px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}
+.kpis div b{display:block;font-size:2rem;line-height:1.1;color:var(--ink)}
+.kpis div span{font-size:.85rem;line-height:1.3;display:block}
+blockquote{margin:0;padding:0;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--ink);line-height:1.4}
+.who{font-family:var(--sans);font-style:normal;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--tan);margin-top:12px;display:block}
+.cases{margin-top:28px}
+.case{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.case img.pic{width:100%;aspect-ratio:16/10;object-fit:cover}
+.case .in{padding:26px;display:flex;flex-direction:column;flex:1}
+.case .top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:6px}
+.case h3{font-size:1.3rem;margin:0}
+.case .loc{font-size:.85rem;margin:2px 0 14px}
+.case .big{text-align:right;line-height:1}
+.case .big b{font-size:2.3rem;color:var(--accent);display:block}
+.case .big span{font-size:.68rem;letter-spacing:.14em;font-weight:600;color:var(--tan)}
+.case ul{list-style:none;padding:0;margin:0 0 18px}
+.case li{padding-left:22px;position:relative;margin-bottom:6px;color:var(--ink);font-size:.97rem}
+.case li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.case blockquote{font-size:1.02rem;margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.proofs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px;align-items:start}
+.proofs img{border-radius:var(--r);border:1px solid var(--line);width:100%}
+.proofs figure{margin:0}
+.proofs figcaption{font-size:.85rem;margin-top:8px;text-align:center}
+
+/* channels */
+.chan .tag{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--accent);background:rgba(194,104,63,.08);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.ticks{list-style:none;padding:0;margin:0}
+.ticks li{padding:7px 0 7px 30px;position:relative;color:var(--ink);font-size:.98rem}
+.ticks li::before{content:"";position:absolute;left:0;top:.8em;width:16px;height:9px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg) translateY(-50%)}
+.ads-shots{display:flex;gap:18px;justify-content:center;align-items:flex-start;margin-top:36px}
+.ads-shots img{border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);max-height:420px;width:auto}
+
+/* different */
+.diff li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink);list-style:none}
+.diff li b{color:var(--accent);font-weight:600}
+.diff{padding:0;margin:20px 0 0}
+
+/* testimonials */
+.tcard{display:flex;gap:18px;align-items:flex-start;padding:24px}
+.tcard img{width:68px;height:68px;border-radius:50%;object-fit:cover;flex:none}
+.tcard .stars{font-size:.9rem;display:block;margin-bottom:2px}
+.tcard b{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:6px}
+.tcard p{margin:0;font-style:italic;font-size:.98rem}
+
+/* guarantee */
+.guar{background:var(--ink);color:#d9d0c8}
+.guar h2,.guar h3{color:#fff}
+.guar em{color:#E39A74}
+.guar .eyebrow{color:#E39A74}
+.guar .split img.photo{max-height:520px}
+.guar strong{color:#fff;font-weight:600}
+.guar .hl{font-family:var(--serif);font-size:1.5rem;color:#fff;margin:6px 0 20px}
+
+/* pricing */
+.price{position:relative;display:flex;flex-direction:column}
+.price.best{border:2px solid var(--accent)}
+.ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:6px 16px;border-radius:999px;white-space:nowrap}
+.price .name{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--tan)}
+.price .amt{font-size:2.9rem;line-height:1.1;margin:8px 0 4px;color:var(--ink)}
+.price .amt small{font-size:1.05rem;font-weight:400;color:var(--body)}
+.price .fine{font-size:.88rem;margin-bottom:18px;color:var(--accent);font-weight:500}
+.price .desc{font-size:.97rem;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.setup{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.setup h3{font-family:var(--sans);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink);margin-bottom:14px}
+.setup h3 b{color:var(--accent)}
+.setup .ticks{columns:1}
+
+/* easy */
+.easy .card{text-align:left;padding:26px}
+.easy h3{font-size:1.2rem}
+.easy p{margin:0;font-size:.95rem}
+
+/* cta */
+.cta{position:relative;color:#fff;text-align:center;padding:110px 0;background:var(--ink)}
+.cta::before{content:"";position:absolute;inset:0;background:url(img/cta.jpg) center/cover;opacity:.28}
+.cta .wrap{position:relative}
+.cta h2{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem)}
+.cta p{color:#e7dfd8;font-size:1.15rem;max-width:52ch;margin:0 auto 30px}
+footer{padding:36px 0;text-align:center;font-size:.85rem;background:var(--ink);color:#a89d92;border-top:1px solid #3a322a}
+footer img{height:30px;margin:0 auto 12px;filter:invert(1);opacity:.9}
+
+@media(max-width:960px){
+  section{padding:64px 0}
+  .split,.elite,.setup{grid-template-columns:1fr}
+  .split{gap:32px}
+  .g3,.proofs{grid-template-columns:1fr}
+  .g4,.stats{grid-template-columns:repeat(2,1fr)}
+  .nav ul{display:none}
+  .badge{left:12px}
+  .elite img{min-height:240px;max-height:320px}
+  .elite .body{padding:28px}
+  .ads-shots{flex-wrap:wrap}
+  .ads-shots img{max-height:340px}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .g2{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(3,1fr);gap:10px}
+  .kpis div b{font-size:1.5rem}
+  .stat b{font-size:2rem}
+  .tcard{padding:20px}
+  .hero{padding:40px 0}
+  .ba-row>div{padding:14px 16px;font-size:.95rem}
+  .cta{padding:80px 0}
+}
 </style>
 </head>
 <body>
-<main>
-<img src="p-01.jpg" width="1920" height="1080" alt="MASTERED MARKETING Unlock your clinic’s true potential with marketing that actually works. Profitable results, amazing service and great value with no lock in contracts - the way it should be." loading="eager">
-<img src="p-02.jpg" width="1920" height="1080" alt="CELEBRATING 10 YEARS About Mastered Marketing Established in 2016, we’re a Brisbane-based marketing agency passionate about helping small businesses unlock their potential. We’ve grown over 100 local companies and are also one of the only agencies in Australia that is a Certified B Corporation." loading="eager">
-<img src="p-03.jpg" width="1920" height="1080" alt="WHAT WE DO We help allied health clinics create a consistent flow of new patients with Google and social media. Every day, clinics spend their hard-earned money on marketing that doesn&#x27;t work, or agencies that underdeliver." loading="lazy">
-<img src="p-04.jpg" width="1920" height="1080" alt="We get you from here... To over here! Unpredictable patient flow. New patients every single week. Losing patients to competitors. The go-to clinic in your local area." loading="lazy">
-<img src="p-05.jpg" width="1920" height="1080" alt="OUR APPROACH No crazy discounts needed. Heavy discounts are common in the health world, like $29 treatments or free assessments. However, these often attract flaky leads that either don&#x27;t show, or don&#x27;t come back after they cashed in their" loading="lazy">
-<img src="p-06.jpg" width="1920" height="1080" alt="CASE STUDIES Elite Health grew from one clinic to three, getting 2600+ bookings for an average of $54. 150+ $54" loading="lazy">
-<img src="p-07.jpg" width="1920" height="1080" alt="These aren’t leads... these are bookings!" loading="lazy">
-<img src="p-08.jpg" width="1920" height="1080" alt="That’s just one example..." loading="lazy">
-<img src="p-09.jpg" width="1920" height="1080" alt="Gladesville Healthcare Physio, Chiro &amp; Podiatry | Gladesville, NSW 822 bookings in seven months Organic web traffic up over 65% Burned by a previous agency “Can&#x27;t recommend highly enough." loading="lazy">
-<img src="p-10.jpg" width="1920" height="1080" alt="Heidelberg Osteopaths Osteopathy &amp; Remedial Massage | Heidelberg, VIC 558 bookings for ~$38 each Hired 1 new staff member Booked out weeks in advance “They drastically increased the" loading="lazy">
-<img src="p-11.jpg" width="1920" height="1080" alt="A Plus Physio Physio, Chiro &amp; Myotherapy | Rochedale, QLD 116 bookings in just a few months Fully booked out by month two Hired 3 new staff members “Exceptional support and fantastic" loading="lazy">
-<img src="p-12.jpg" width="1920" height="1080" alt="Village Remedies Acupuncture &amp; Chinese Medicine | Sydney, NSW 362 patient bookings Page 1 on Google for key terms Opened a new clinic in Hobart The team are amazing. We’ve never" loading="lazy">
-<img src="p-13.jpg" width="1920" height="1080" alt="Summit Chiropractic Sports Chiropractic | Geelong, VIC 154 bookings from Meta alone Organic traffic doubled in 6 months Saving a heap on marketing “The upmost professionalism and" loading="lazy">
-<img src="p-14.jpg" width="1920" height="1080" alt="Here’s how it works!" loading="lazy">
-<img src="p-15.jpg" width="1920" height="1080" alt="Social Media Ads Get daily bookings on social media with simple, attention-grabbing catchy ads about specific injuries. Design and video editing. Ad copywriting." loading="lazy">
-<img src="p-16.jpg" width="1920" height="1080" alt="Google Ads Get more daily bookings by showing relevant ads to people in the area searching Google for a physio. Landing page design. Ad copywriting." loading="lazy">
-<img src="p-17.jpg" width="1920" height="1080" alt="Search Engine Optimisation Show up on page 1 of Google, outrank competitors and get new patients each week without spending money on ads. Get found on Google + Maps Show up in ChatGPT + AI search" loading="lazy">
-<img src="p-18.jpg" width="1920" height="1080" alt="WHAT MAKES US DIFFERENT We do one thing, and we do it better than anyone: get allied health clinics booked out. We work exclusively with allied health clinics. That means we&#x27;re not figuring things out on the fly. We already know what works, what to fix, and how to get you booked out faster." loading="lazy">
-<img src="p-19.jpg" width="1920" height="1080" alt="CREAGH | SPORTS CHIRO An absolute dream. I’ve worked with other agencies and the difference is night and day. They are the best, I wouldn’t go with anyone else! BRIANA | SPORTS CHIRO" loading="lazy">
-<img src="p-20.jpg" width="1920" height="1080" alt="BENJAMIN | SPORTS CHIRO The upmost professionalism and dedication in helping with the entire process of our marketing. Very thorough, highly recommend. BEN | BATHHOUSE OWNER" loading="lazy">
-<img src="p-21.jpg" width="1920" height="1080" alt="OUR GUARANTEE You don’t pay until it works. Words are nice, but you want proof. So we don&#x27;t start your monthly fee until we&#x27;ve generated your first 5 bookings. Not leads. Patient bookings in your calendar. And if things ever dip, we&#x27;ve got you covered. If ad results" loading="lazy">
-<img src="p-22.jpg" width="1920" height="1080" alt="We&#x27;re not the cheapest. We’re the team that gets the result you want. There are a lot of cheap agencies out there. But you don’t want cheap, you want results. That’s what we do. Our system gets clinics booked out, consistently. We know what works because we&#x27;ve done it time and time again for a" loading="lazy">
-<img src="p-23.jpg" width="1920" height="1080" alt="Save $6000 per year! A D S O N LY ADS + SEO S E O O N LY $1500 / month $2500 / month" loading="lazy">
-<img src="p-24.jpg" width="1920" height="1080" alt="Get set up for marketing success. Before launch, we build a high-performing marketing machine. We’ve spent years refining a system that’s about as close to bulletproof as you can get. It’s not just some pretty designs. Every element is built to convert and drive growth. ADS SETUP | $500" loading="lazy">
-<img src="p-25.jpg" width="1920" height="1080" alt="We Make It As Easy As Possible Hiring an agency can often result in lengthy meetings, waiting months to see results, spending hours on content and dissecting huge reports. Not with us! We know you’re busy, and we give you maximum output for minimum time investment. Fast Onboarding Fast Results" loading="lazy">
-<img src="p-26.jpg" width="1920" height="1080" alt="We’re Ready When You Are! MASTERED MARKETING" loading="lazy">
-</main>
+
+<header class="nav">
+  <div class="wrap">
+    <img src="img/logo.png" alt="Mastered Marketing" width="140" height="123">
+    <ul>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#guarantee">Guarantee</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <a class="btn" href="https://calendly.com/mitch-hills/growth-consultation">Book a call</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Mastered Marketing for Allied Health</span>
+      <h1>Unlock your clinic's true potential with marketing that <em>actually works.</em></h1>
+      <p class="lead">Profitable results, amazing service and great value with no lock in contracts - the way it should be.</p>
+      <a class="btn" href="#pricing">See pricing</a>&nbsp;&nbsp;<a class="btn ghost" href="#results">See results</a>
+      <div class="proof"><span class="stars" aria-hidden="true">★★★★★</span><span>100+ five star reviews</span></div>
+    </div>
+    <div class="hero-img">
+      <img src="img/hero.jpg" alt="The Elite Health team" width="1100" height="1210" fetchpriority="high">
+      <div class="badge"><b>10 years</b><span>Celebrating a decade</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="wrap split">
+    <img class="photo" src="img/about.jpg" alt="Mitch and a client" loading="lazy" width="900" height="1117">
+    <div>
+      <span class="eyebrow">About Mastered Marketing</span>
+      <h2>A Brisbane marketing agency that's helped <em>100+ local companies</em> grow.</h2>
+      <p>Established in 2016, we're passionate about helping small businesses unlock their potential. We've grown over 100 local companies and are one of the only agencies in Australia that is a Certified B Corporation.</p>
+      <p>If you want to reach that next level with a team that has a proven track record, genuinely cares about you and will do all they can to help you grow, you're in the right place!</p>
+      <div class="stats" style="grid-template-columns:repeat(3,1fr);gap:18px">
+        <div class="stat"><b class="num">2016</b><span>Established</span></div>
+        <div class="stat"><b class="num">100+</b><span>Companies grown</span></div>
+        <div class="stat"><b class="num">B Corp</b><span>Certified</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap press"><small>As seen in</small><img src="img/press-1.jpg" alt="Press logos" loading="lazy" width="867" height="92"></div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="alt">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">What we do</span>
+      <h2>We help allied health clinics create a consistent flow of new patients with <em>Google and social media.</em></h2>
+      <p class="lead">Every day, clinics spend their hard-earned money on marketing that doesn't work, or agencies that underdeliver. We refuse to let this happen to our clients. Anyone can set up a website or run an ad, but few can make it profitable and sustainable. That takes a proven system and real expertise... which is where we come in!</p>
+    </div>
+    <div class="ba">
+      <div class="ba-row ba-head"><div>We get you from here...</div><div>To over here!</div></div>
+      <div class="ba-row"><div>Unpredictable patient flow</div><div>New patients every single week</div></div>
+      <div class="ba-row"><div>Losing patients to competitors</div><div>The go-to clinic in your local area</div></div>
+      <div class="ba-row"><div>Constantly on the hamster wheel</div><div>Cash flow stability and consistency</div></div>
+      <div class="ba-row"><div>Lots of empty space in your calendar</div><div>Calendar is full of high quality patients</div></div>
+      <div class="ba-row"><div>Stuck on the tools / in the business</div><div>Time to focus on growth (or a holiday!)</div></div>
+      <div class="ba-row"><div>Worrying if staff will leave</div><div>Keep staff happy and attract top talent</div></div>
+      <div class="ba-row"><div>Being burned by marketing agencies</div><div>Marketing is profitable and fun!</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Our approach</span>
+      <h2>No crazy discounts <em>needed.</em></h2>
+      <p>Heavy discounts are common in the health world, like $29 treatments or free assessments.</p>
+      <p>However, these often attract flaky leads that either don't show, or don't come back after they cashed in their coupon. Plus, they can sometimes damage your brand.</p>
+      <p>Instead of cheap promos, we use social proof and well-crafted messaging to attract your ideal patients who are happy to pay for your expertise. And it works!</p>
+    </div>
+    <img class="photo" src="img/what.jpg" alt="Clinic training session" loading="lazy" width="800" height="1000">
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="alt" id="results">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:40px">
+      <span class="eyebrow">Case studies</span>
+      <h2>These aren't leads... <em>these are bookings!</em></h2>
+    </div>
+
+    <div class="elite">
+      <img src="img/elite.jpg" alt="Elite Health clinic" loading="lazy" width="900" height="1100">
+      <div class="body">
+        <span class="eyebrow">Elite Health</span>
+        <h3>Elite Health grew from one clinic to three, getting 2600+ bookings for an average of $54.</h3>
+        <div class="kpis">
+          <div><b class="num">150+</b><span>New patients per month</span></div>
+          <div><b class="num">$54</b><span>Avg. cost per booking</span></div>
+          <div><b class="num">2600+</b><span>Total bookings generated</span></div>
+          <div><b class="num">80</b><span>Keywords on page 1 of Google</span></div>
+          <div><b class="num">380%</b><span>Increase in organic traffic</span></div>
+          <div><b class="num">70%</b><span>Of patients come from digital</span></div>
+        </div>
+        <blockquote>"An absolute dream"<br><span style="font-size:1rem;font-style:normal;font-family:var(--sans);color:var(--body)">Working with Mastered Marketing is an absolute dream. I've worked with other agencies before and the difference is night and day. The results are fantastic, the service is amazing and anything I need gets done quickly without any errors which makes everything so easy.</span><span class="who">Creagh Court | Owner</span></blockquote>
+      </div>
+    </div>
+
+    <p class="center" style="margin:48px 0 0;font-family:var(--serif);font-size:1.5rem;color:var(--ink)">That's just one example...</p>
+
+    <div class="grid g3 cases">
+      <div class="card case">
+        <img class="pic" src="img/gladesville.jpg" alt="Gladesville Healthcare" loading="lazy" width="800" height="500">
+        <div class="in">
+          <div class="top"><div><h3>Gladesville Healthcare</h3><p class="loc">Physio, Chiro &amp; Podiatry | Gladesville, NSW</p></div><div class="big"><b class="num">822</b><span>BOOKINGS</span></div></div>
+          <ul><li>822 bookings in seven months</li><li>Organic web traffic up over 65%</li><li>Burned by a previous agency</li></ul>
+          <blockquote>"Can't recommend highly enough. They've restored our faith that a good marketing team does exist!"<span class="who">Marcus Drivas | Owner &amp; Chiro</span></blockquote>
+        </div>
+      </div>
+      <div class="card case">
+        <img class="pic" src="img/heidelberg.jpg" alt="Heidelberg Osteopaths" loading="lazy" width="800" height="500">
+        <div class="in">
+          <div class="top"><div><h3>Heidelberg Osteopaths</h3><p class="loc">Osteopathy &amp; Remedial Massage | Heidelberg, VIC</p></div><div class="big"><b class="num">558</b><span>BOOKINGS</span></div></div>
+          <ul><li>558 bookings for ~$38 each</li><li>Hired 1 new staff member</li><li>Booked out weeks in advance</li></ul>
+          <blockquote>"They drastically increased the amount of new patients we have coming in. Couldn't be happier!"<span class="who">Andrew | Owner &amp; Osteo</span></blockquote>
+        </div>
+      </div>
+      <div class="card case">
+        <img class="pic" src="img/aplus.jpg" alt="A Plus Physio" loading="lazy" width="800" height="500">
+        <div class="in">
+          <div class="top"><div><h3>A Plus Physio</h3><p class="loc">Physio, Chiro &amp; Myotherapy | Rochedale, QLD</p></div><div class="big"><b class="num">116</b><span>BOOKINGS</span></div></div>
+          <ul><li>116 bookings in just a few months</li><li>Fully booked out by month two</li><li>Hired 3 new staff members</li></ul>
+          <blockquote>"Exceptional support and fantastic results. I did a lot of research and they stood out, as have the results."<span class="who">Austin | Owner &amp; Physio</span></blockquote>
+        </div>
+      </div>
+      <div class="card case">
+        <img class="pic" src="img/village.jpg" alt="Village Remedies" loading="lazy" width="800" height="500">
+        <div class="in">
+          <div class="top"><div><h3>Village Remedies</h3><p class="loc">Acupuncture &amp; Chinese Medicine | Sydney, NSW</p></div><div class="big"><b class="num">362</b><span>BOOKINGS</span></div></div>
+          <ul><li>362 patient bookings</li><li>Page 1 on Google for key terms</li><li>Opened a new clinic in Hobart</li></ul>
+          <blockquote>"The team are amazing. We've never been better and we now have 3 clinics. Can't recommend enough!"<span class="who">Brendan | Owner</span></blockquote>
+        </div>
+      </div>
+      <div class="card case">
+        <img class="pic" src="img/summit.jpg" alt="Summit Chiropractic" loading="lazy" width="800" height="500">
+        <div class="in">
+          <div class="top"><div><h3>Summit Chiropractic</h3><p class="loc">Sports Chiropractic | Geelong, VIC</p></div><div class="big"><b class="num">154</b><span>BOOKINGS</span></div></div>
+          <ul><li>154 bookings from Meta alone</li><li>Organic traffic doubled in 6 months</li><li>Saving a heap on marketing</li></ul>
+          <blockquote>"The upmost professionalism and dedication in helping our clinic. Very thorough, highly recommend."<span class="who">Ben | Owner &amp; Chiro</span></blockquote>
+        </div>
+      </div>
+      <div class="card case" style="background:var(--ink);justify-content:center;text-align:center">
+        <div class="in" style="justify-content:center;align-items:center">
+          <span class="eyebrow" style="color:#E39A74">Want results like these?</span>
+          <h3 style="color:#fff;font-size:1.6rem">Let's talk about your clinic.</h3>
+          <a class="btn" href="https://calendly.com/mitch-hills/growth-consultation" style="margin-top:12px">Book a call</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proofs">
+      <figure><img src="img/chat-1.jpg" alt="Client message: 14 new patients just for today" loading="lazy" width="600" height="900"><figcaption>Messages from clients</figcaption></figure>
+      <figure><img src="img/chat-2.jpg" alt="Client message: already 21 new patients, ads going nuts" loading="lazy" width="600" height="900"><figcaption>Messages from clients</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:40px">
+      <span class="eyebrow">Here's how it works</span>
+      <h2>Three ways we get you <em>booked out.</em></h2>
+    </div>
+    <div class="grid g3 chan">
+      <div class="card"><span class="tag">Social media ads</span><h3>Get daily bookings on social media.</h3><p>Simple, attention-grabbing catchy ads about specific injuries.</p>
+        <ul class="ticks"><li>Design and video editing</li><li>Ad copywriting</li><li>Landing page design</li><li>Professional voiceovers</li><li>Campaign management</li></ul></div>
+      <div class="card"><span class="tag">Google ads</span><h3>Get more daily bookings from Google.</h3><p>Show relevant ads to people in the area searching Google for a physio.</p>
+        <ul class="ticks"><li>Landing page design</li><li>Ad copywriting</li><li>Technical optimisations</li><li>Campaign management</li></ul></div>
+      <div class="card"><span class="tag">Search engine optimisation</span><h3>Show up on page 1 of Google.</h3><p>Outrank competitors and get new patients each week without spending money on ads.</p>
+        <ul class="ticks"><li>Get found on Google + Maps</li><li>Show up in ChatGPT + AI search</li><li>Fresh content every month</li><li>Outrank local competitors</li><li>Technical SEO + backlinks</li></ul></div>
+    </div>
+    <div class="ads-shots">
+      <img src="img/ad-1.jpg" alt="Example Meta ad" loading="lazy" width="424" height="743">
+      <img src="img/ad-2.jpg" alt="Example Meta ad creative" loading="lazy" width="291" height="635">
+      <img src="img/google-ad.jpg" alt="Example Google search ad" loading="lazy" width="600" height="640">
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENT -->
+<section class="alt">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:12px">
+      <span class="eyebrow">What makes us different</span>
+      <h2>We do one thing, and we do it better than anyone: <em>get allied health clinics booked out.</em></h2>
+      <p class="lead">We work exclusively with allied health clinics. That means we're not figuring things out on the fly. We already know what works, what to fix, and how to get you booked out faster.</p>
+    </div>
+    <div class="grid g2" style="margin-top:40px">
+      <div class="card"><h3>You'll also love...</h3>
+        <ul class="diff">
+          <li><b>No lock in contracts</b> - all month to month.</li>
+          <li><b>Risk-free</b> - you only pay once it's working.</li>
+          <li><b>All inclusive</b> - design, editing, copy and more.</li>
+          <li><b>Support</b> - great service and proactive support.</li>
+          <li style="border:0"><b>Exclusivity</b> - we only work with one clinic per area.</li>
+        </ul>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:center">
+        <span class="eyebrow">Makes it easy</span>
+        <h3>Hiring an agency shouldn't be a second job.</h3>
+        <p>Hiring an agency can often mean lengthy meetings, waiting months to see results, spending hours on content and dissecting huge reports. Not with us! We know you're busy, and we give you maximum output for minimum time investment.</p>
+      </div>
+    </div>
+    <div class="grid g4 easy" style="margin-top:24px">
+      <div class="card"><h3>Fast onboarding</h3><p>Onboarding is faster than a Netflix episode. One 60 min kickoff call, then one email for you to share feedback on our drafts. That's it!</p></div>
+      <div class="card"><h3>Fast results</h3><p>No waiting months to get results. You'll have improved marketing assets in 7 days, and patients in under 14 days.</p></div>
+      <div class="card"><h3>Easy content</h3><p>No expensive shoots or time consuming content. All we need is a few smartphone photos, and we'll turn it into engaging ads.</p></div>
+      <div class="card"><h3>Easy reporting</h3><p>No 20 page PDFs. We give short and sharp reports with only critical info. Just tell us your feedback and we do the rest!</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="center" style="margin-bottom:40px">
+      <span class="eyebrow">Don't just take our word for it</span>
+      <h2>100+ five star reviews and <em>counting.</em></h2>
+    </div>
+    <div class="grid g2">
+      <div class="card tcard"><img src="img/h-creagh.jpg" alt="Creagh" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Creagh | Sports Chiro</b><p>An absolute dream. I've worked with other agencies and the difference is night and day. They are the best, I wouldn't go with anyone else!</p></div></div>
+      <div class="card tcard"><img src="img/h-april.jpg" alt="April" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>April | Podiatrist</b><p>They've been amazing to work with. We saw an immediate increase in patient bookings. Super responsive and helpful, highly recommend!</p></div></div>
+      <div class="card tcard"><img src="img/h-briana.jpg" alt="Briana" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Briana | Sports Chiro</b><p>The impact on our clinic has been incredible. With their help we opened 2 new clinics and they helped us get fully booked within the first month!</p></div></div>
+      <div class="card tcard"><img src="img/h-austin.jpg" alt="Austin" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Austin | Physio</b><p>Exceptional support and fantastic results. I did a lot of research and they definitely stood out, as have the results they've brought to our clinic.</p></div></div>
+      <div class="card tcard"><img src="img/h-marcus.jpg" alt="Marcus" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Marcus | Physio</b><p>Incredible to work with, I can't recommend highly enough. In a few weeks, they've restored our faith that a good marketing team does work!</p></div></div>
+      <div class="card tcard"><img src="img/h-andrew.jpg" alt="Andrew" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Andrew | Osteopath</b><p>They have been amazing for my clinic. They drastically increased the amount of new patients we have coming in, couldn't be happier!</p></div></div>
+      <div class="card tcard"><img src="img/h-benjamin.jpg" alt="Benjamin" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Benjamin | Sports Chiro</b><p>The upmost professionalism and dedication in helping with the entire process of our marketing. Very thorough, highly recommend.</p></div></div>
+      <div class="card tcard"><img src="img/h-brendan.jpg" alt="Brendan" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Brendan | Acupuncturist</b><p>The team are amazing. Our bookings have never been better and our marketing costs lower. We now have 3 clinics, can't recommend enough!</p></div></div>
+      <div class="card tcard"><img src="img/h-ben.jpg" alt="Ben" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Ben | Bathhouse Owner</b><p>They have gone above and beyond and the results we are achieving is absolutely outstanding. They really care about our business and it shows.</p></div></div>
+      <div class="card tcard"><img src="img/h-david.jpg" alt="David Pocock" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>David Pocock</b><p>They've been really great to work with. They buy into what we're doing, they want to see it succeed and that's a great partnership to have.</p></div></div>
+      <div class="card tcard"><img src="img/h-michela.jpg" alt="Michela" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Michela | Wellness Coach</b><p>I don't think words can capture the level of gratitude and appreciation I have for them. Their combination of marketing skills is just magic!</p></div></div>
+      <div class="card tcard"><img src="img/h-claire.jpg" alt="Claire" loading="lazy" width="68" height="68"><div><span class="stars" aria-hidden="true">★★★★★</span><b>Claire | Charity CEO</b><p>An amazing team with a level of service over and above what we could have ever expected. They can handle anything you throw at them!</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guar" id="guarantee">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Our guarantee</span>
+      <h2>You don't pay <em>until it works.</em></h2>
+      <p>Words are nice, but you want proof. So we don't start your monthly fee until we've generated your first 5 bookings.</p>
+      <p class="hl">Not leads. Patient bookings in your calendar.</p>
+      <p>And if things ever dip, we've got you covered. If ad results drop well below normal for a full month, and your budget, follow-up and availability are all on track, we'll halve your retainer until it's back where it should be.</p>
+      <p>We don't work with just anyone. We sent you this because you're exactly the type of clinic we know we can help, which is why we make your decision a <strong>no-brainer.</strong></p>
+    </div>
+    <img class="photo" src="img/guarantee.jpg" alt="Clinic rehab session" loading="lazy" width="700" height="1108">
+  </div>
+</section>
+
+<!-- NOT CHEAPEST -->
+<section>
+  <div class="wrap split">
+    <img class="photo" src="img/cheapest.jpg" alt="Physio treating a patient" loading="lazy" width="700" height="933">
+    <div>
+      <span class="eyebrow">Why us</span>
+      <h2>We're not the cheapest. We're the team that <em>gets the result you want.</em></h2>
+      <p>There are a lot of cheap agencies out there. But you don't want <em style="color:inherit">cheap</em>, you want <em style="color:inherit">results</em>. That's what we do.</p>
+      <p>Our system gets clinics booked out, consistently. We know what works because we've done it time and time again for a list of thriving allied health clinics.</p>
+      <p>You've probably seen patients go for the cheap option, only to end up on your table anyway. Why? Because you get the job done. Marketing's no different.</p>
+      <p>You can roll the dice on a cheap version if you want. Or, use a proven system, backed by a guarantee and no lock-in. If you want the latter - we've got you covered.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="alt" id="pricing">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:48px">
+      <span class="eyebrow">Pricing</span>
+      <h2>Simple packages. <em>Month to month.</em></h2>
+    </div>
+    <div class="grid g3">
+      <div class="card price">
+        <span class="name">Ads only</span>
+        <div class="amt num">$1500<small> / month</small></div>
+        <div class="fine">+ GST. $1000 minimum ad spend required</div>
+        <p class="desc">Get new patients fast. Show up in front of people actively searching or scrolling, and turn them into booked appointments. No SEO included.</p>
+        <ul class="ticks"><li>Google Search &amp; Map ads</li><li>Instagram &amp; Facebook ads</li><li>Landing page designs + updates</li><li>Copy, design, video editing + voiceovers</li><li>Weekly ad optimisation + reporting</li></ul>
+      </div>
+      <div class="card price best">
+        <span class="ribbon">Save $6000 per year!</span>
+        <span class="name">Ads + SEO</span>
+        <div class="amt num">$2500<small> / month</small></div>
+        <div class="fine">+ GST. $1000 minimum ad spend required</div>
+        <p class="desc">The ultimate combo for a complete, long-lasting online presence that outshines competitors. Ads fuel fast growth, SEO builds long-term results and awareness.</p>
+        <ul class="ticks"><li>Everything from Ads Package</li><li>Everything from SEO Package</li><li>The best results and best value</li><li>Priority support + turnaround times</li><li>Everything you need in one place</li></ul>
+      </div>
+      <div class="card price">
+        <span class="name">SEO only</span>
+        <div class="amt num">$1500<small> /month</small></div>
+        <div class="fine">+ GST. No ad spend needed</div>
+        <p class="desc">Show up on Google and make sure patients come to you, not competitors. Takes longer than ads to get results, but brings in patients without ad spend.</p>
+        <ul class="ticks"><li>Website upgrade + maintenance</li><li>Get found on Google + Maps</li><li>Show up in ChatGPT, Claude + AI</li><li>Monthly content written for you</li><li>Reviews and local listings handled</li></ul>
+      </div>
+    </div>
+
+    <div class="center" style="margin:56px 0 0">
+      <span class="eyebrow">Get set up for marketing success</span>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Before launch, we build a high-performing marketing machine.</h2>
+      <p class="lead">We've spent years refining a system that's about as close to bulletproof as you can get. It's not just some pretty designs. Every element is built to convert and drive growth.</p>
+    </div>
+    <div class="setup">
+      <div class="card"><h3>Ads setup | <b>$500</b></h3>
+        <ul class="ticks"><li>Landing pages</li><li>Google + Meta ad copy</li><li>Video scripts + editing</li><li>Ad tracking setup</li><li>Google campaign setup</li><li>Meta campaign setup</li></ul></div>
+      <div class="card"><h3>SEO setup | <b>$500</b></h3>
+        <ul class="ticks"><li>Website design upgrade</li><li>Keyword research</li><li>Google maps optimisation</li><li>Analytics + tracking setup</li><li>Fix all technical errors</li><li>Content plan</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#E39A74">Mastered Marketing</span>
+    <h2>We're ready when you are!</h2>
+    <p>Book a quick call and we'll look at your clinic, your area and what it would take to get you booked out.</p>
+    <a class="btn" href="https://calendly.com/mitch-hills/growth-consultation">Book a call</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Mastered Marketing" width="140" height="123">
+    <div>&copy; 2026 Mastered Marketing. Brisbane, Australia. Certified B Corporation.</div>
+  </div>
+</footer>
+
 </body>
 </html>
